@@ -12,7 +12,7 @@ function crearFlorGrande() {
 function crearTulipan() {
     const flor = document.createElement('div');
     flor.classList.add('flor');
-    flor.innerText = '🌷'; 
+    flor.innerText = '🌻'; 
     flor.style.left = Math.random() * 95 + "vw";
     flor.style.top = Math.random() * 95 + "vh";
     document.body.appendChild(flor);
