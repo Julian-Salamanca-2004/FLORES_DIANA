@@ -1,6 +1,7 @@
 function crearFlorGrande() {
     const florImg = document.createElement('img');
-    florImg.src = "Flor_Amarilla.png"; // Asegúrate que el archivo subido se llame así exactamente
+    // IMPORTANTE: El nombre debe ser idéntico al que subiste (Flor_Amarilla.png)
+    florImg.src = "Flor_Amarilla.png"; 
     florImg.classList.add('flor-creciente');
     florImg.style.left = (Math.random() * 70 + 10) + "vw"; 
     document.body.appendChild(florImg);
