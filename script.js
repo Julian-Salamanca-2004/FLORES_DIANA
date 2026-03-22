@@ -3,7 +3,7 @@ function crearFlorGrande() {
     const florImg = document.createElement('img');
     
     // Tu ruta de imagen local
-    florImg.src = "file:///C:/Users/jsala/Documents/andy/Flor_Amarilla.png";
+    florImg.src = "Flor_Amarilla.png";
     
     florImg.classList.add('flor-creciente');
     
