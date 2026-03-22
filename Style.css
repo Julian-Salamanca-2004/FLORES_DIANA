@@ -1,0 +1,58 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #050505; 
+    overflow: hidden;
+    font-family: 'Georgia', serif;
+}
+
+.mensaje-container {
+    text-align: center;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 30px;
+    border-radius: 30px;
+    z-index: 100; /* Asegura que el texto esté sobre las flores */
+    max-width: 80%;
+    border: 1px solid rgba(255, 214, 0, 0.5);
+    box-shadow: 0 0 30px rgba(255, 214, 0, 0.3);
+    color: #fffde7;
+    position: relative;
+}
+
+.texto-principal { font-size: 1.6rem; font-weight: bold; margin-bottom: 15px; text-shadow: 0 0 10px #ffd600; }
+.texto-secundario { font-size: 1.1rem; line-height: 1.5; font-style: italic; color: #fff9c4; }
+
+/* ESTILO DE LA FLOR QUE CRECE DESDE ABAJO (ACTUALIZADO) */
+.flor-creciente {
+    position: absolute;
+    bottom: -50px; /* Empieza un poco escondida */
+    width: 300px;  /* TAMAÑO AUMENTADO */
+    z-index: 50; /* Flores grandes por debajo del texto, pero sobre los tulipanes */
+    filter: drop-shadow(0 0 10px gold);
+    /* ANIMACIÓN MÁS RÁPIDA (1.5s) y se queda al final (forwards) */
+    animation: brotar 1.5s ease-out forwards; 
+}
+
+@keyframes brotar {
+    0% { transform: translateY(100%) scale(0.5); opacity: 0; }
+    100% { transform: translateY(0) scale(1); opacity: 1; }
+}
+
+/* Tulipanes pequeños aleatorios */
+.flor {
+    position: absolute;
+    font-size: 40px;
+    z-index: 1; /* Fondo total */
+    filter: drop-shadow(0 0 10px gold);
+    animation: aparecer 2.5s ease-out forwards;
+}
+
+@keyframes aparecer {
+    0% { transform: scale(0); opacity: 0; }
+    50% { opacity: 1; }
+    100% { transform: scale(1.2); opacity: 0; }
+}
